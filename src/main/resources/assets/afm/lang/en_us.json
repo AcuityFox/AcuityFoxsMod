@@ -1,0 +1,9 @@
+{
+  "block.afm.devblock": "Dev Block",
+  "block.afm.devore": "Dev Ore",
+
+  "item.afm.devitem": "Dev Item",
+  "item.afm.copper_plate": "Copper Plate",
+
+  "creativetab.afm_tab": "AFM"
+}

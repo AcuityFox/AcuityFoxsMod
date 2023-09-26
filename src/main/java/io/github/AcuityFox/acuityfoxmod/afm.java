@@ -1,6 +1,9 @@
 package io.github.AcuityFox.acuityfoxmod;
 
 import com.mojang.logging.LogUtils;
+import io.github.AcuityFox.acuityfoxmod.block.ModBlocks;
+import io.github.AcuityFox.acuityfoxmod.items.ModCreativeModTabs;
+import io.github.AcuityFox.acuityfoxmod.items.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -39,6 +42,11 @@ public class afm {
 
     public afm() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
